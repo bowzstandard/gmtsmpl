@@ -25,7 +25,6 @@ var (
 	eng sprite.Engine
 	scene *sprite.Node
 	sz size.Event
-	index int = 0
 	txList =  [...]string{
 		"話をしよう。",
 		"あれは今から36万・・・いや、1万4000年前だったか。",
@@ -115,6 +114,8 @@ func loadScene(){
 	for i:=0;i<len(txList);i++{
 		st[i]=tf.Generate(sz,txList[i])
 	}
+
+	index:=0
 
 	n.Arranger = arrangerFunc(func(eng sprite.Engine,n *sprite.Node,t clock.Time){
 
