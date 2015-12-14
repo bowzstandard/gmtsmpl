@@ -16,7 +16,7 @@ import(
 	"golang.org/x/mobile/exp/gl/glutil"
 	
 
-	"gomobile-ttf-sample/textutil"
+	"gmtsmpl/textutil"
 )
 
 var (
@@ -108,7 +108,7 @@ func loadScene(){
 	})
 	
 	n := newNode()
-	tf:=textutil.TextField{}
+	tf:=&textutil.TextField{}
 	tf.New(eng,images)
 	st:=make([]*textutil.TextureData,len(txList))
 	for i:=0;i<len(txList);i++{
